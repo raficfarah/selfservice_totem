@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\labsd\Projeto RTL\Source\BCD_7seg\simulation\modelsim
+Ebcd_7seg
+Z1 w1750437534
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dZ:\labsd\Projeto RTL\Source\BCD_7seg\simulation\modelsim
+Z5 8Z:/labsd/Projeto RTL/Source/BCD_7seg/BCD_7seg.vhd
+Z6 FZ:/labsd/Projeto RTL/Source/BCD_7seg/BCD_7seg.vhd
+l0
+L4
+V1_S9fc11kiUV:ZnHOGZc`0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1750438090.413000
+Z9 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/BCD_7seg/BCD_7seg.vhd|
+Z10 !s107 Z:/labsd/Projeto RTL/Source/BCD_7seg/BCD_7seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 J`4UEPGAQC=oN4hZR9M3g0
+!i10b 1
+Awith_select_bcd7seg
+R2
+R3
+DEx4 work 8 bcd_7seg 0 22 1_S9fc11kiUV:ZnHOGZc`0
+l12
+L11
+VI5o;b_=Ehljn3J4CObK9d3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 _f05gjFI:Dc2?4hePJOT[2
+!i10b 1
+Etb_bcd_7seg
+Z13 w1750438050
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8Z:/labsd/Projeto RTL/Source/BCD_7seg/tb_BCD_7seg.vhd
+Z16 FZ:/labsd/Projeto RTL/Source/BCD_7seg/tb_BCD_7seg.vhd
+l0
+L5
+VnSGFQ2kVQ3zhKMUC89maL2
+!s100 9Dj1^We;Jm45T:A6MA0`g2
+R7
+31
+!i10b 1
+Z17 !s108 1750438090.653000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/BCD_7seg/tb_BCD_7seg.vhd|
+Z19 !s107 Z:/labsd/Projeto RTL/Source/BCD_7seg/tb_BCD_7seg.vhd|
+R11
+R12
+Abehaviour
+R14
+R2
+R3
+DEx4 work 11 tb_bcd_7seg 0 22 nSGFQ2kVQ3zhKMUC89maL2
+l20
+L8
+V7T7HihMD1o=kDVR3QoJY;1
+!s100 ]PRI<YndFdm_T1ezE04Z40
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

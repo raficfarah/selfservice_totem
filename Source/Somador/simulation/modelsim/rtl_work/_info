@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\labsd\Projeto RTL\Source\Somador\simulation\modelsim
+Esomador
+Z1 w1750440512
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\labsd\Projeto RTL\Source\Somador\simulation\modelsim
+Z6 8Z:/labsd/Projeto RTL/Source/Somador/Somador.vhd
+Z7 FZ:/labsd/Projeto RTL/Source/Somador/Somador.vhd
+l0
+L5
+VlSgDKb]XS2kYLHYRg<;iD0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1750441159.756000
+Z10 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/Somador/Somador.vhd|
+Z11 !s107 Z:/labsd/Projeto RTL/Source/Somador/Somador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 68j9N7`I?l8iog=IH6>`70
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 7 somador 0 22 lSgDKb]XS2kYLHYRg<;iD0
+l22
+L21
+V6>nZLe5_P13a5=;0F2b_i1
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 j=b<P80Y33@JaD^4ZS9LR3
+!i10b 1
+Etb_somador
+Z14 w1750441146
+R2
+R3
+R4
+R5
+Z15 8Z:/labsd/Projeto RTL/Source/Somador/tb_Somador.vhd
+Z16 FZ:/labsd/Projeto RTL/Source/Somador/tb_Somador.vhd
+l0
+L5
+VOHC=G9MCTGBITEGQFVEe[1
+!s100 LRGiYZ9oC0l;lHO:RJn:O2
+R8
+31
+!i10b 1
+Z17 !s108 1750441160.017000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/Somador/tb_Somador.vhd|
+Z19 !s107 Z:/labsd/Projeto RTL/Source/Somador/tb_Somador.vhd|
+R12
+R13
+Abehaviour
+R2
+R3
+R4
+DEx4 work 10 tb_somador 0 22 OHC=G9MCTGBITEGQFVEe[1
+l26
+L8
+V[;n531VNC[LlgHJieN7ib1
+!s100 >]TEiHKg=?908k>X572G42
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

@@ -1,0 +1,151 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\labsd\Projeto RTL\Source\RegFile_Prices\simulation\modelsim
+Emux_16x1_13bits
+Z1 w1750369339
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\labsd\Projeto RTL\Source\RegFile_Prices\simulation\modelsim
+Z6 8Z:/labsd/Projeto RTL/Source/RegFile_Prices/MUX_16x1_13bits.vhd
+Z7 FZ:/labsd/Projeto RTL/Source/RegFile_Prices/MUX_16x1_13bits.vhd
+l0
+L5
+Va[hkeNzJgBamSMRk]X@nl0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1750445985.656000
+Z10 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/RegFile_Prices/MUX_16x1_13bits.vhd|
+Z11 !s107 Z:/labsd/Projeto RTL/Source/RegFile_Prices/MUX_16x1_13bits.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 9JHY3[dT1Bg`ZoZORcZW01
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 15 mux_16x1_13bits 0 22 a[hkeNzJgBamSMRk]X@nl0
+l36
+L35
+VVPa@OSil0QzcaKfLIS[0M0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 VCUK?id@K2Ll[8Z:bXQk41
+!i10b 1
+Eregfile
+Z14 w1750445771
+R2
+R3
+R4
+R5
+Z15 8Z:/labsd/Projeto RTL/Source/RegFile_Prices/RegFile.vhd
+Z16 FZ:/labsd/Projeto RTL/Source/RegFile_Prices/RegFile.vhd
+l0
+L5
+VjQdi5OeeSDPPT9HcXif432
+R8
+31
+Z17 !s108 1750445985.841000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/RegFile_Prices/RegFile.vhd|
+Z19 !s107 Z:/labsd/Projeto RTL/Source/RegFile_Prices/RegFile.vhd|
+R12
+R13
+!s100 P:MWA3jh16Q@=fBhd[1[23
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 7 regfile 0 22 jQdi5OeeSDPPT9HcXif432
+l77
+L21
+V@zI>OB7TX?HKnU07Q9A]Z3
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 hf?aLHJId_B0>_5m_0OAH1
+!i10b 1
+Eregw
+Z20 w1750381489
+R3
+R4
+R5
+Z21 8Z:/labsd/Projeto RTL/Source/RegW/RegW.vhd
+Z22 FZ:/labsd/Projeto RTL/Source/RegW/RegW.vhd
+l0
+L4
+V@]ce5lPFh8a`VDDPeW[P<2
+R8
+31
+Z23 !s108 1750445986.063000
+Z24 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/RegW/RegW.vhd|
+Z25 !s107 Z:/labsd/Projeto RTL/Source/RegW/RegW.vhd|
+R12
+R13
+!s100 NScm]VYG8H0d_A]5ecgN13
+!i10b 1
+Artl
+R3
+R4
+DEx4 work 4 regw 0 22 @]ce5lPFh8a`VDDPeW[P<2
+l20
+L19
+VH72f:cMoSC2?S6Q?1`D7C1
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 6Gof:V@eXnd[TM1?:D8em2
+!i10b 1
+Etb_regfile
+Z26 w1750445865
+R2
+R3
+R4
+R5
+Z27 8Z:/labsd/Projeto RTL/Source/RegFile_Prices/tb_RegFile.vhd
+Z28 FZ:/labsd/Projeto RTL/Source/RegFile_Prices/tb_RegFile.vhd
+l0
+L5
+V37FZ53c<=?kVEUNkGB5oB0
+!s100 4Vg^@aCS_@RagKF37Y70;3
+R8
+31
+!i10b 1
+Z29 !s108 1750445986.296000
+Z30 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/RegFile_Prices/tb_RegFile.vhd|
+Z31 !s107 Z:/labsd/Projeto RTL/Source/RegFile_Prices/tb_RegFile.vhd|
+R12
+R13
+Abehaviour
+R2
+R3
+R4
+DEx4 work 10 tb_regfile 0 22 37FZ53c<=?kVEUNkGB5oB0
+l30
+L8
+V58UK6XY7zbJkkz`VTDmKZ0
+!s100 FGhlIXPY1zI7UP0GI@;4m2
+R8
+31
+!i10b 1
+R29
+R30
+R31
+R12
+R13

@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\labsd\Projeto RTL\Source\RegW\simulation\modelsim
+Eregw
+Z1 w1750381489
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dZ:\labsd\Projeto RTL\Source\RegW\simulation\modelsim
+Z5 8Z:/labsd/Projeto RTL/Source/RegW/RegW.vhd
+Z6 FZ:/labsd/Projeto RTL/Source/RegW/RegW.vhd
+l0
+L4
+V@]ce5lPFh8a`VDDPeW[P<2
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1750438695.103000
+Z9 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/RegW/RegW.vhd|
+Z10 !s107 Z:/labsd/Projeto RTL/Source/RegW/RegW.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 NScm]VYG8H0d_A]5ecgN13
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 4 regw 0 22 @]ce5lPFh8a`VDDPeW[P<2
+l20
+L19
+VH72f:cMoSC2?S6Q?1`D7C1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 6Gof:V@eXnd[TM1?:D8em2
+!i10b 1
+Etb_regw
+Z13 w1750438640
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8Z:/labsd/Projeto RTL/Source/RegW/tb_RegW.vhd
+Z16 FZ:/labsd/Projeto RTL/Source/RegW/tb_RegW.vhd
+l0
+L5
+VC@B6>g7N=0N5HB96fSR<I1
+!s100 i79[H1D>gdHY8=@Me7[LY0
+R7
+31
+!i10b 1
+Z17 !s108 1750438695.333000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/RegW/tb_RegW.vhd|
+Z19 !s107 Z:/labsd/Projeto RTL/Source/RegW/tb_RegW.vhd|
+R11
+R12
+Ateste
+R14
+R2
+R3
+DEx4 work 7 tb_regw 0 22 C@B6>g7N=0N5HB96fSR<I1
+l27
+L8
+Vf[L4ig<aedBdoGFhbEZUa0
+!s100 306ojk4kP?=3J1bO8Fg7_2
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

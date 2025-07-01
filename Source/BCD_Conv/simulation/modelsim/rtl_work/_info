@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\labsd\Projeto RTL\Source\BCD_Conv\simulation\modelsim
+Ebcd_conv
+Z1 w1750380985
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\labsd\Projeto RTL\Source\BCD_Conv\simulation\modelsim
+Z6 8Z:/labsd/Projeto RTL/Source/BCD_Conv/bcd_conv.vhd
+Z7 FZ:/labsd/Projeto RTL/Source/BCD_Conv/bcd_conv.vhd
+l0
+L5
+VScYcGKMdW7]i@NWlG2g:F1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1750444171.333000
+Z10 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/BCD_Conv/bcd_conv.vhd|
+Z11 !s107 Z:/labsd/Projeto RTL/Source/BCD_Conv/bcd_conv.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 ;kUaTlTJlFkZRj4R>2ge_3
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+DEx4 work 8 bcd_conv 0 22 ScYcGKMdW7]i@NWlG2g:F1
+l17
+L15
+V50zX:d?V0k>c4J:XSbN`U2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 eB_gKT155DKRMANh=;cIA0
+!i10b 1
+Etb_bcd_conv
+Z14 w1750444153
+R2
+R3
+R4
+R5
+Z15 8Z:/labsd/Projeto RTL/Source/BCD_Conv/tb_BCD_Conv.vhd
+Z16 FZ:/labsd/Projeto RTL/Source/BCD_Conv/tb_BCD_Conv.vhd
+l0
+L5
+VP::T7biFb^UImg91Wzfod0
+!s100 iFKXoeIVabRPJmb6XCf`n2
+R8
+31
+!i10b 1
+Z17 !s108 1750444171.545000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/BCD_Conv/tb_BCD_Conv.vhd|
+Z19 !s107 Z:/labsd/Projeto RTL/Source/BCD_Conv/tb_BCD_Conv.vhd|
+R12
+R13
+Abehaviour
+R2
+R3
+R4
+DEx4 work 11 tb_bcd_conv 0 22 P::T7biFb^UImg91Wzfod0
+l23
+L8
+VZl7oO12J@I:L^?XThJ2;_3
+!s100 N>VE_>hW6o][O@UdC9k172
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

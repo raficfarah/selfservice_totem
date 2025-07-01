@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\labsd\Projeto RTL\Source\Subtrator\simulation\modelsim
+Esubtrator
+Z1 w1750309218
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\labsd\Projeto RTL\Source\Subtrator\simulation\modelsim
+Z6 8Z:/labsd/Projeto RTL/Source/Subtrator/Subtrator.vhd
+Z7 FZ:/labsd/Projeto RTL/Source/Subtrator/Subtrator.vhd
+l0
+L5
+VHCD6k>SH8;3k7BS>hDPlL1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1750441450.634000
+Z10 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/Subtrator/Subtrator.vhd|
+Z11 !s107 Z:/labsd/Projeto RTL/Source/Subtrator/Subtrator.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 8WlgD;k@6nCkz<g;KzH[@1
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 9 subtrator 0 22 HCD6k>SH8;3k7BS>hDPlL1
+l22
+L21
+V7J@P<edJJW@Kg?6JKI2N02
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 3iW6o=YIdW>Q;Mhb^ngz73
+!i10b 1
+Etb_subtrator
+Z14 w1750441363
+R2
+R3
+R4
+R5
+Z15 8Z:/labsd/Projeto RTL/Source/Subtrator/tb_Subtrator.vhd
+Z16 FZ:/labsd/Projeto RTL/Source/Subtrator/tb_Subtrator.vhd
+l0
+L5
+VL>`bm`dCAESVQHkW5F=TW3
+!s100 IFNJ80RkLWYYnBOO``YG_3
+R8
+31
+!i10b 1
+Z17 !s108 1750441450.870000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/Subtrator/tb_Subtrator.vhd|
+Z19 !s107 Z:/labsd/Projeto RTL/Source/Subtrator/tb_Subtrator.vhd|
+R12
+R13
+Abehaviour
+R2
+R3
+R4
+DEx4 work 12 tb_subtrator 0 22 L>`bm`dCAESVQHkW5F=TW3
+l26
+L8
+VfT3PZaa:[f]0JGEbI]cR@1
+!s100 g:gbjE1ezLkmdZO>RT8U41
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\labsd\Projeto RTL\Source\MUX_Din\simulation\modelsim
+Emux_din
+Z1 w1750447901
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\labsd\Projeto RTL\Source\MUX_Din\simulation\modelsim
+Z6 8Z:/labsd/Projeto RTL/Source/MUX_Din/MUX_Din.vhd
+Z7 FZ:/labsd/Projeto RTL/Source/MUX_Din/MUX_Din.vhd
+l0
+L6
+V?LG`JQ74aZM1SOR5;ijCA3
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1750448280.065000
+Z10 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/MUX_Din/MUX_Din.vhd|
+Z11 !s107 Z:/labsd/Projeto RTL/Source/MUX_Din/MUX_Din.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 ]5=o0@JgAhCbEAY@?>j2<1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 7 mux_din 0 22 ?LG`JQ74aZM1SOR5;ijCA3
+l28
+L27
+VaYWJJRSancRdNVQiadLBh3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 D`04Sa]f5l9O:dHCjA03`3
+!i10b 1
+Etb_mux_din
+Z14 w1750448247
+R2
+R3
+R4
+R5
+Z15 8Z:/labsd/Projeto RTL/Source/MUX_Din/tb_MUX_Din.vhd
+Z16 FZ:/labsd/Projeto RTL/Source/MUX_Din/tb_MUX_Din.vhd
+l0
+L5
+VaIV0g07^7G36@UanDVmM[3
+!s100 ^?78Z;a^Dg_g`d_Kd8k9o1
+R8
+31
+!i10b 1
+Z17 !s108 1750448280.254000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/labsd/Projeto RTL/Source/MUX_Din/tb_MUX_Din.vhd|
+Z19 !s107 Z:/labsd/Projeto RTL/Source/MUX_Din/tb_MUX_Din.vhd|
+R12
+R13
+Abehaviour
+R2
+R3
+R4
+DEx4 work 10 tb_mux_din 0 22 aIV0g07^7G36@UanDVmM[3
+l34
+L8
+VcnZ`GeVbT4EI`I`mNbgbD3
+!s100 Kdz]1_fo>KY2Y30ee7Si`2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13
