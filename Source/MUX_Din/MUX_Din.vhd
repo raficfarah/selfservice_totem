@@ -9,9 +9,7 @@ entity MUX_Din is
 	);
 	
 	Port ( 
-		S0  : in std_logic;
-		S1  : in std_logic;
-		S2  : in std_logic;
+		S : in std_logic_vector (2 downto 0);
 		I0  : in std_logic_vector((W-1) downto 0) := "0000000011001"; -- 25
 		I1  : in std_logic_vector((W-1) downto 0) := "0000000110010"; -- 50
 		I2  : in std_logic_vector((W-1) downto 0) := "0000001100100"; -- 100
@@ -26,14 +24,15 @@ end MUX_Din;
 
 architecture Behavioral of MUX_Din is
 begin
-	Z <= 
-		I0 when S0 = '0' and S1 = '0' and S2 = '0' else  
-		I1 when S0 = '0' and S1 = '0' and S2 = '1' else  
-		I2 when S0 = '0' and S1 = '1' and S2 = '0' else  
-		I3 when S0 = '0' and S1 = '1' and S2 = '1' else  
-		I4 when S0 = '1' and S1 = '0' and S2 = '0' else  
-		I5 when S0 = '1' and S1 = '0' and S2 = '1' else  
-		I6 when S0 = '1' and S1 = '1' and S2 = '0' else  
-		I7 when S0 = '1' and S1 = '1' and S2 = '1' else  
-		"0000000000000";		   	   	
+	with S select
+		Z <= 
+			I0 when "000",
+			I1 when "001", 
+			I2 when "010", 
+			I3 when "011", 
+			I4 when "100", 
+			I5 when "101", 
+			I6 when "110", 
+			I7 when "111", 
+			"0000000000000" when others;		   	   	
 end Behavioral;

@@ -48,9 +48,7 @@ begin
 	);
 
 	-- fio_z: 0000000011001 (25), 0000000110010 (50), 0000001100100 (100)
-	fio_S0 <= '0', '1' after 10 ns, '0' after 20 ns;
-    fio_S1 <= '0', '0' after 10 ns, '1' after 20 ns;
-    fio_S2 <= '0', '0' after 10 ns, '0' after 20 ns;
 
+	fio_S <= "0000", "0001" after 10 ns, "0010" after 20 ns;
 
 end Behaviour; -- Behaviour

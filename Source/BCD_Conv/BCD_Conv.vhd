@@ -13,13 +13,11 @@ entity BCD_Conv is
 end BCD_Conv;
 
 architecture Behaviour of BCD_Conv is
-    signal binary : unsigned(12 downto 0);
 begin
     process(entrada)
         variable temp : unsigned(28 downto 0); -- 13 (bin) + 4*4 (BCD)
         variable i : integer;
     begin
-        binary <= entrada;
         temp := (others => '0');
         temp(12 downto 0) := entrada;
 
