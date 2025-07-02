@@ -1,0 +1,22 @@
+|Controladora
+CLK => estado_atual~1.DATAIN
+RST => estado_atual~3.DATAIN
+E => process_1.IN0
+E => proximo_estado.S2.DATAB
+E => Selector1.IN2
+E => process_1.IN0
+Z => Selector1.IN4
+Z => Selector0.IN2
+Maior_B => process_1.IN1
+Maior_B => process_1.IN1
+Menor_P => Selector3.IN3
+Menor_P => proximo_estado.S6.DATAB
+Ld_Prod <= Ld_Prod.DB_MAX_OUTPUT_PORT_TYPE
+Ld_Bank <= Ld_Bank.DB_MAX_OUTPUT_PORT_TYPE
+RST_Bank <= RST_Bank.DB_MAX_OUTPUT_PORT_TYPE
+Ld_Troco <= Ld_Troco.DB_MAX_OUTPUT_PORT_TYPE
+RST_Troco <= RST_Troco.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

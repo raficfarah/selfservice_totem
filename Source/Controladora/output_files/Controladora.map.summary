@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Wed Jul  2 12:04:22 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : Controladora
+Top-level Entity Name : Controladora
+Family : Arria II GX
+Logic utilization : N/A
+    Combinational ALUTs : 10
+    Memory ALUTs : 0
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 13
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
+Total DLLs : 0

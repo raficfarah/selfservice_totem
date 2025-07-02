@@ -1,0 +1,598 @@
+Analysis & Synthesis report for Totem
+Wed Jul  2 12:52:20 2025
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Totem|Controladora:myControladora|estado_atual
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Datapath:myDatapath|RegW:Prod
+ 11. Parameter Settings for User Entity Instance: Datapath:myDatapath|RegW:Bank
+ 12. Parameter Settings for User Entity Instance: Datapath:myDatapath|RegW:Troco
+ 13. Parameter Settings for User Entity Instance: Datapath:myDatapath|Somador:mySomador
+ 14. Parameter Settings for User Entity Instance: Datapath:myDatapath|Subtrator:mySubtrator
+ 15. Parameter Settings for User Entity Instance: Datapath:myDatapath|comparador:ComparadorGT
+ 16. Parameter Settings for User Entity Instance: Datapath:myDatapath|comparador:ComparadorLT
+ 17. Parameter Settings for User Entity Instance: Datapath:myDatapath|MUX_Din:myMUX_Din
+ 18. Parameter Settings for User Entity Instance: Datapath:myDatapath|prices:myPrices
+ 19. Port Connectivity Checks: "Datapath:myDatapath|MUX_Din:myMUX_Din"
+ 20. Port Connectivity Checks: "Datapath:myDatapath|comparador:ComparadorLT"
+ 21. Port Connectivity Checks: "Datapath:myDatapath|comparador:ComparadorGT"
+ 22. Port Connectivity Checks: "Datapath:myDatapath|RegW:Prod"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++-----------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status       ; Successful - Wed Jul  2 12:52:20 2025          ;
+; Quartus Prime Version             ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                     ; Totem                                          ;
+; Top-level Entity Name             ; Totem                                          ;
+; Family                            ; Arria II GX                                    ;
+; Logic utilization                 ; N/A                                            ;
+;     Combinational ALUTs           ; 135                                            ;
+;     Memory ALUTs                  ; 0                                              ;
+;     Dedicated logic registers     ; 38                                             ;
+; Total registers                   ; 38                                             ;
+; Total pins                        ; 60                                             ;
+; Total virtual pins                ; 0                                              ;
+; Total block memory bits           ; 0                                              ;
+; DSP block 18-bit elements         ; 0                                              ;
+; Total GXB Receiver Channel PCS    ; 0                                              ;
+; Total GXB Receiver Channel PMA    ; 0                                              ;
+; Total GXB Transmitter Channel PCS ; 0                                              ;
+; Total GXB Transmitter Channel PMA ; 0                                              ;
+; Total PLLs                        ; 0                                              ;
+; Total DLLs                        ; 0                                              ;
++-----------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                           ; Totem              ; Totem              ;
+; Family name                                                                     ; Arria II GX        ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; ../BCD_7seg/BCD_7seg.vhd         ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_7seg/BCD_7seg.vhd         ;         ;
+; ../BCD_Conv/BCD_Conv.vhd         ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_Conv/BCD_Conv.vhd         ;         ;
+; ../Comparador/comparador.vhd     ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Comparador/comparador.vhd     ;         ;
+; ../MUX_Din/MUX_Din.vhd           ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/MUX_Din/MUX_Din.vhd           ;         ;
+; ../Prices/Prices.vhd             ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Prices/Prices.vhd             ;         ;
+; ../Subtrator/Subtrator.vhd       ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Subtrator/Subtrator.vhd       ;         ;
+; ../Somador/Somador.vhd           ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Somador/Somador.vhd           ;         ;
+; ../RegW/RegW.vhd                 ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/RegW/RegW.vhd                 ;         ;
+; ../Controladora/Controladora.vhd ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Controladora/Controladora.vhd ;         ;
+; ../Datapath/Datapath.vhd         ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd         ;         ;
+; Totem.vhd                        ; yes             ; User VHDL File  ; /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd               ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++-----------------------------------------------+-----------+
+; Resource                                      ; Usage     ;
++-----------------------------------------------+-----------+
+; Estimated ALUTs Used                          ; 135       ;
+;     -- Combinational ALUTs                    ; 135       ;
+;     -- Memory ALUTs                           ; 0         ;
+;     -- LUT_REGs                               ; 0         ;
+; Dedicated logic registers                     ; 38        ;
+;                                               ;           ;
+; Estimated ALUTs Unavailable                   ; 26        ;
+;     -- Due to unpartnered combinational logic ; 26        ;
+;     -- Due to Memory ALUTs                    ; 0         ;
+;                                               ;           ;
+; Total combinational functions                 ; 135       ;
+; Combinational ALUT usage by number of inputs  ;           ;
+;     -- 7 input functions                      ; 0         ;
+;     -- 6 input functions                      ; 29        ;
+;     -- 5 input functions                      ; 16        ;
+;     -- 4 input functions                      ; 55        ;
+;     -- <=3 input functions                    ; 35        ;
+;                                               ;           ;
+; Combinational ALUTs by mode                   ;           ;
+;     -- normal mode                            ; 109       ;
+;     -- extended LUT mode                      ; 0         ;
+;     -- arithmetic mode                        ; 13        ;
+;     -- shared arithmetic mode                 ; 13        ;
+;                                               ;           ;
+; Estimated ALUT/register pairs used            ; 165       ;
+;                                               ;           ;
+; Total registers                               ; 38        ;
+;     -- Dedicated logic registers              ; 38        ;
+;     -- I/O registers                          ; 0         ;
+;     -- LUT_REGs                               ; 0         ;
+;                                               ;           ;
+;                                               ;           ;
+; I/O pins                                      ; 60        ;
+;                                               ;           ;
+; DSP block 18-bit elements                     ; 0         ;
+;                                               ;           ;
+; Maximum fan-out node                          ; CLK~input ;
+; Maximum fan-out                               ; 38        ;
+; Total fan-out                                 ; 821       ;
+; Average fan-out                               ; 2.80      ;
++-----------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
++----------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name  ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------+--------------+--------------+
+; |Totem                           ; 135 (0)             ; 38 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 60   ; 0            ; |Totem                                             ; Totem        ; work         ;
+;    |Controladora:myControladora| ; 10 (10)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Controladora:myControladora                 ; Controladora ; work         ;
+;    |Datapath:myDatapath|         ; 125 (0)             ; 30 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath                         ; Datapath     ; work         ;
+;       |BCD_7seg:myBCD_C|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|BCD_7seg:myBCD_C        ; BCD_7seg     ; work         ;
+;       |BCD_7seg:myBCD_D|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|BCD_7seg:myBCD_D        ; BCD_7seg     ; work         ;
+;       |BCD_7seg:myBCD_M|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|BCD_7seg:myBCD_M        ; BCD_7seg     ; work         ;
+;       |BCD_7seg:myBCD_U|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|BCD_7seg:myBCD_U        ; BCD_7seg     ; work         ;
+;       |BCD_Conv:myBCD_Conv|      ; 41 (41)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|BCD_Conv:myBCD_Conv     ; BCD_Conv     ; work         ;
+;       |MUX_Din:myMUX_Din|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|MUX_Din:myMUX_Din       ; MUX_Din      ; work         ;
+;       |RegW:Bank|                ; 0 (0)               ; 13 (13)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|RegW:Bank               ; RegW         ; work         ;
+;       |RegW:Prod|                ; 0 (0)               ; 4 (4)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|RegW:Prod               ; RegW         ; work         ;
+;       |RegW:Troco|               ; 0 (0)               ; 13 (13)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|RegW:Troco              ; RegW         ; work         ;
+;       |Somador:mySomador|        ; 13 (13)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|Somador:mySomador       ; Somador      ; work         ;
+;       |Subtrator:mySubtrator|    ; 13 (13)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|Subtrator:mySubtrator   ; Subtrator    ; work         ;
+;       |comparador:ComparadorGT|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|comparador:ComparadorGT ; comparador   ; work         ;
+;       |comparador:ComparadorLT|  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|comparador:ComparadorLT ; comparador   ; work         ;
+;       |prices:myPrices|          ; 13 (13)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|prices:myPrices         ; prices       ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Totem|Controladora:myControladora|estado_atual                                                                                                 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; estado_atual.S7 ; estado_atual.S6 ; estado_atual.S5 ; estado_atual.S4 ; estado_atual.S3 ; estado_atual.S2 ; estado_atual.S1 ; estado_atual.S0 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; estado_atual.S0 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
+; estado_atual.S1 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
+; estado_atual.S2 ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
+; estado_atual.S3 ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
+; estado_atual.S4 ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
+; estado_atual.S5 ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; estado_atual.S6 ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; estado_atual.S7 ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|RegW:Prod ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; w              ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|RegW:Bank ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; w              ; 13    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|RegW:Troco ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; w              ; 13    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|Somador:mySomador ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 13    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|Subtrator:mySubtrator ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; data_width     ; 13    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|comparador:ComparadorGT ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; data_width     ; 13    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|comparador:ComparadorLT ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; data_width     ; 13    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|MUX_Din:myMUX_Din ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; w              ; 13    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:myDatapath|prices:myPrices ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; w              ; 13    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:myDatapath|MUX_Din:myMUX_Din" ;
++------------+-------+----------+-----------------------------------+
+; Port       ; Type  ; Severity ; Details                           ;
++------------+-------+----------+-----------------------------------+
+; i0[4..3]   ; Input ; Info     ; Stuck at VCC                      ;
+; i0[12..5]  ; Input ; Info     ; Stuck at GND                      ;
+; i0[2..1]   ; Input ; Info     ; Stuck at GND                      ;
+; i0[0]      ; Input ; Info     ; Stuck at VCC                      ;
+; i1[5..4]   ; Input ; Info     ; Stuck at VCC                      ;
+; i1[12..6]  ; Input ; Info     ; Stuck at GND                      ;
+; i1[3..2]   ; Input ; Info     ; Stuck at GND                      ;
+; i1[1]      ; Input ; Info     ; Stuck at VCC                      ;
+; i1[0]      ; Input ; Info     ; Stuck at GND                      ;
+; i2[6..5]   ; Input ; Info     ; Stuck at VCC                      ;
+; i2[12..7]  ; Input ; Info     ; Stuck at GND                      ;
+; i2[4..3]   ; Input ; Info     ; Stuck at GND                      ;
+; i2[1..0]   ; Input ; Info     ; Stuck at GND                      ;
+; i2[2]      ; Input ; Info     ; Stuck at VCC                      ;
+; i3[7..6]   ; Input ; Info     ; Stuck at VCC                      ;
+; i3[12..8]  ; Input ; Info     ; Stuck at GND                      ;
+; i3[5..4]   ; Input ; Info     ; Stuck at GND                      ;
+; i3[2..0]   ; Input ; Info     ; Stuck at GND                      ;
+; i3[3]      ; Input ; Info     ; Stuck at VCC                      ;
+; i4[8..4]   ; Input ; Info     ; Stuck at VCC                      ;
+; i4[12..9]  ; Input ; Info     ; Stuck at GND                      ;
+; i4[1..0]   ; Input ; Info     ; Stuck at GND                      ;
+; i4[3]      ; Input ; Info     ; Stuck at GND                      ;
+; i4[2]      ; Input ; Info     ; Stuck at VCC                      ;
+; i5[9..5]   ; Input ; Info     ; Stuck at VCC                      ;
+; i5[12..10] ; Input ; Info     ; Stuck at GND                      ;
+; i5[2..0]   ; Input ; Info     ; Stuck at GND                      ;
+; i5[4]      ; Input ; Info     ; Stuck at GND                      ;
+; i5[3]      ; Input ; Info     ; Stuck at VCC                      ;
+; i6[10..6]  ; Input ; Info     ; Stuck at VCC                      ;
+; i6[12..11] ; Input ; Info     ; Stuck at GND                      ;
+; i6[3..0]   ; Input ; Info     ; Stuck at GND                      ;
+; i6[5]      ; Input ; Info     ; Stuck at GND                      ;
+; i6[4]      ; Input ; Info     ; Stuck at VCC                      ;
+; i7[9..7]   ; Input ; Info     ; Stuck at VCC                      ;
+; i7[11..10] ; Input ; Info     ; Stuck at GND                      ;
+; i7[6..4]   ; Input ; Info     ; Stuck at GND                      ;
+; i7[2..0]   ; Input ; Info     ; Stuck at GND                      ;
+; i7[12]     ; Input ; Info     ; Stuck at VCC                      ;
+; i7[3]      ; Input ; Info     ; Stuck at VCC                      ;
++------------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:myDatapath|comparador:ComparadorLT"                                         ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:myDatapath|comparador:ComparadorGT"                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[9..7]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[11..10] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[6..4]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[2..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[12]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[3]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; menor     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; igual     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:myDatapath|RegW:Prod" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriaii_ff            ; 38                          ;
+;     CLR               ; 8                           ;
+;     ENA               ; 4                           ;
+;     ENA CLR           ; 26                          ;
+; boundary_port         ; 60                          ;
+; stratixiv_lcell_comb  ; 140                         ;
+;     arith             ; 13                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 5                           ;
+;         4 data inputs ; 7                           ;
+;     normal            ; 114                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 48                          ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 29                          ;
+;     shared            ; 13                          ;
+;         2 data inputs ; 13                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.30                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Wed Jul  2 12:52:06 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Totem -c Totem
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_7seg/BCD_7seg.vhd
+    Info (12022): Found design unit 1: Bcd_7seg-with_select_bcd7seg File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_7seg/BCD_7seg.vhd Line: 11
+    Info (12023): Found entity 1: BCD_7seg File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_7seg/BCD_7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_Conv/BCD_Conv.vhd
+    Info (12022): Found design unit 1: BCD_Conv-Behaviour File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_Conv/BCD_Conv.vhd Line: 15
+    Info (12023): Found entity 1: BCD_Conv File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/BCD_Conv/BCD_Conv.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Comparador/comparador.vhd
+    Info (12022): Found design unit 1: comparador-rtl File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Comparador/comparador.vhd Line: 23
+    Info (12023): Found entity 1: comparador File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Comparador/comparador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/MUX_Din/MUX_Din.vhd
+    Info (12022): Found design unit 1: MUX_Din-Behavioral File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/MUX_Din/MUX_Din.vhd Line: 25
+    Info (12023): Found entity 1: MUX_Din File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/MUX_Din/MUX_Din.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Prices/Prices.vhd
+    Info (12022): Found design unit 1: prices-Behavioral File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Prices/Prices.vhd Line: 17
+    Info (12023): Found entity 1: prices File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Prices/Prices.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Subtrator/Subtrator.vhd
+    Info (12022): Found design unit 1: Subtrator-rtl File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Subtrator/Subtrator.vhd Line: 21
+    Info (12023): Found entity 1: Subtrator File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Subtrator/Subtrator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Somador/Somador.vhd
+    Info (12022): Found design unit 1: Somador-rtl File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Somador/Somador.vhd Line: 21
+    Info (12023): Found entity 1: Somador File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Somador/Somador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/RegW/RegW.vhd
+    Info (12022): Found design unit 1: RegW-RTL File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/RegW/RegW.vhd Line: 20
+    Info (12023): Found entity 1: RegW File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/RegW/RegW.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Controladora/Controladora.vhd
+    Info (12022): Found design unit 1: Controladora-RTL File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Controladora/Controladora.vhd Line: 17
+    Info (12023): Found entity 1: Controladora File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Controladora/Controladora.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd
+    Info (12022): Found design unit 1: Datapath-RTL File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 29
+    Info (12023): Found entity 1: Datapath File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Totem.vhd
+    Info (12022): Found design unit 1: Totem-RTL File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 24
+    Info (12023): Found entity 1: Totem File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 5
+Info (12127): Elaborating entity "Totem" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Totem.vhd(14): used implicit default value for signal "Maior_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at Totem.vhd(14): used implicit default value for signal "Menor_P" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:myDatapath" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 72
+Info (12128): Elaborating entity "RegW" for hierarchy "Datapath:myDatapath|RegW:Prod" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 152
+Info (12128): Elaborating entity "RegW" for hierarchy "Datapath:myDatapath|RegW:Bank" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 165
+Info (12128): Elaborating entity "Somador" for hierarchy "Datapath:myDatapath|Somador:mySomador" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 191
+Info (12128): Elaborating entity "Subtrator" for hierarchy "Datapath:myDatapath|Subtrator:mySubtrator" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 202
+Info (12128): Elaborating entity "comparador" for hierarchy "Datapath:myDatapath|comparador:ComparadorGT" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 213
+Info (12128): Elaborating entity "MUX_Din" for hierarchy "Datapath:myDatapath|MUX_Din:myMUX_Din" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 235
+Info (12128): Elaborating entity "BCD_Conv" for hierarchy "Datapath:myDatapath|BCD_Conv:myBCD_Conv" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 245
+Info (12128): Elaborating entity "BCD_7seg" for hierarchy "Datapath:myDatapath|BCD_7seg:myBCD_M" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 254
+Info (12128): Elaborating entity "prices" for hierarchy "Datapath:myDatapath|prices:myPrices" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 281
+Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:myControladora" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at Controladora.vhd(33): signal "estado_atual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Controladora/Controladora.vhd Line: 33
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Maior_B" is stuck at GND File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
+    Warning (13410): Pin "Menor_P" is stuck at GND File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 200 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 49 output pins
+    Info (21061): Implemented 140 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 488 megabytes
+    Info: Processing ended: Wed Jul  2 12:52:20 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:32
+
+

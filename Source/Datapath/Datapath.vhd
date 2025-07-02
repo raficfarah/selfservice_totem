@@ -38,10 +38,10 @@ architecture RTL of Datapath is
         );
 
         port (
-            CLK : in std_logic;
-            RST : in std_logic;
-            D : in std_logic_vector((W - 1) downto 0);
-            Q : out std_logic_vector((W - 1) downto 0) := (others => '0');
+            CLK  : in std_logic;
+            RST  : in std_logic;
+            D    : in std_logic_vector((W - 1) downto 0);
+            Q    : out std_logic_vector((W - 1) downto 0) := (others => '0');
             LOAD : in std_logic
         );
     end component;
@@ -54,7 +54,7 @@ architecture RTL of Datapath is
         );
 
         port (
-            S : in std_logic_vector(2 downto 0);
+            S  : in std_logic_vector(2 downto 0);
             I0 : in std_logic_vector((W - 1) downto 0) := "0000000011001"; -- 25
             I1 : in std_logic_vector((W - 1) downto 0) := "0000000110010"; -- 50
             I2 : in std_logic_vector((W - 1) downto 0) := "0000001100100"; -- 100
@@ -63,7 +63,7 @@ architecture RTL of Datapath is
             I5 : in std_logic_vector((W - 1) downto 0) := "0001111101000"; -- 1000
             I6 : in std_logic_vector((W - 1) downto 0) := "0011111010000"; -- 2000
             I7 : in std_logic_vector((W - 1) downto 0) := "1001110001000"; -- 5000
-            Z : out std_logic_vector((W - 1) downto 0)
+            Z  : out std_logic_vector((W - 1) downto 0)
         );
     end component;
 
