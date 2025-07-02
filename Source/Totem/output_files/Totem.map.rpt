@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Totem
-Wed Jul  2 12:52:20 2025
+Wed Jul  2 12:56:55 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +-----------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Wed Jul  2 12:52:20 2025          ;
+; Analysis & Synthesis Status       ; Successful - Wed Jul  2 12:56:55 2025          ;
 ; Quartus Prime Version             ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                     ; Totem                                          ;
 ; Top-level Entity Name             ; Totem                                          ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Memory ALUTs                  ; 0                                              ;
 ;     Dedicated logic registers     ; 38                                             ;
 ; Total registers                   ; 38                                             ;
-; Total pins                        ; 60                                             ;
+; Total pins                        ; 58                                             ;
 ; Total virtual pins                ; 0                                              ;
 ; Total block memory bits           ; 0                                              ;
 ; DSP block 18-bit elements         ; 0                                              ;
@@ -179,7 +179,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -239,14 +240,14 @@ https://fpgasoftware.intel.com/eula.
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
 ;                                               ;           ;
-; I/O pins                                      ; 60        ;
+; I/O pins                                      ; 58        ;
 ;                                               ;           ;
 ; DSP block 18-bit elements                     ; 0         ;
 ;                                               ;           ;
 ; Maximum fan-out node                          ; CLK~input ;
 ; Maximum fan-out                               ; 38        ;
-; Total fan-out                                 ; 821       ;
-; Average fan-out                               ; 2.80      ;
+; Total fan-out                                 ; 819       ;
+; Average fan-out                               ; 2.83      ;
 +-----------------------------------------------+-----------+
 
 
@@ -255,7 +256,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name  ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------+--------------+--------------+
-; |Totem                           ; 135 (0)             ; 38 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 60   ; 0            ; |Totem                                             ; Totem        ; work         ;
+; |Totem                           ; 135 (0)             ; 38 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 58   ; 0            ; |Totem                                             ; Totem        ; work         ;
 ;    |Controladora:myControladora| ; 10 (10)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Controladora:myControladora                 ; Controladora ; work         ;
 ;    |Datapath:myDatapath|         ; 125 (0)             ; 30 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath                         ; Datapath     ; work         ;
 ;       |BCD_7seg:myBCD_C|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |Totem|Datapath:myDatapath|BCD_7seg:myBCD_C        ; BCD_7seg     ; work         ;
@@ -490,14 +491,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 8                           ;
 ;     ENA               ; 4                           ;
 ;     ENA CLR           ; 26                          ;
-; boundary_port         ; 60                          ;
-; stratixiv_lcell_comb  ; 140                         ;
+; boundary_port         ; 58                          ;
+; stratixiv_lcell_comb  ; 139                         ;
 ;     arith             ; 13                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 5                           ;
 ;         4 data inputs ; 7                           ;
-;     normal            ; 114                         ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 113                         ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 7                           ;
@@ -508,7 +508,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         2 data inputs ; 13                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.30                        ;
+; Average LUT depth     ; 4.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -527,7 +527,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Jul  2 12:52:06 2025
+    Info: Processing started: Wed Jul  2 12:56:41 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Totem -c Totem
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -562,12 +562,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/r
     Info (12022): Found design unit 1: Datapath-RTL File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 29
     Info (12023): Found entity 1: Datapath File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Totem.vhd
-    Info (12022): Found design unit 1: Totem-RTL File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 24
+    Info (12022): Found design unit 1: Totem-RTL File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 22
     Info (12023): Found entity 1: Totem File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 5
 Info (12127): Elaborating entity "Totem" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Totem.vhd(14): used implicit default value for signal "Maior_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at Totem.vhd(14): used implicit default value for signal "Menor_P" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:myDatapath" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 72
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:myDatapath" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 70
 Info (12128): Elaborating entity "RegW" for hierarchy "Datapath:myDatapath|RegW:Prod" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 152
 Info (12128): Elaborating entity "RegW" for hierarchy "Datapath:myDatapath|RegW:Bank" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 165
 Info (12128): Elaborating entity "Somador" for hierarchy "Datapath:myDatapath|Somador:mySomador" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 191
@@ -577,22 +575,19 @@ Info (12128): Elaborating entity "MUX_Din" for hierarchy "Datapath:myDatapath|MU
 Info (12128): Elaborating entity "BCD_Conv" for hierarchy "Datapath:myDatapath|BCD_Conv:myBCD_Conv" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 245
 Info (12128): Elaborating entity "BCD_7seg" for hierarchy "Datapath:myDatapath|BCD_7seg:myBCD_M" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 254
 Info (12128): Elaborating entity "prices" for hierarchy "Datapath:myDatapath|prices:myPrices" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 281
-Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:myControladora" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 96
+Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:myControladora" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 94
 Warning (10492): VHDL Process Statement warning at Controladora.vhd(33): signal "estado_atual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Controladora/Controladora.vhd Line: 33
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Maior_B" is stuck at GND File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
-    Warning (13410): Pin "Menor_P" is stuck at GND File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 200 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 198 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 49 output pins
+    Info (21059): Implemented 47 output pins
     Info (21061): Implemented 140 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 488 megabytes
-    Info: Processing ended: Wed Jul  2 12:52:20 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 504 megabytes
+    Info: Processing ended: Wed Jul  2 12:56:55 2025
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Total CPU time (on all processors): 00:00:31
 
 

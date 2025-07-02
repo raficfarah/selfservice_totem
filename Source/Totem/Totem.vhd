@@ -11,8 +11,6 @@ entity Totem is
 		prod_in						: in std_logic_vector(3 downto 0);
 		din							: in std_logic_vector(2 downto 0);
 
-		Maior_B, Menor_P			: out std_logic;
-
 		C, F						: out std_logic;
 		prod_out					: out std_logic_vector(3 downto 0);
 		troco_out 					: out std_logic_vector(12 downto 0);

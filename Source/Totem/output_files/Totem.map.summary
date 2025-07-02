@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Wed Jul  2 12:52:20 2025
+Analysis & Synthesis Status : Successful - Wed Jul  2 12:56:55 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Totem
 Top-level Entity Name : Totem
@@ -8,7 +8,7 @@ Logic utilization : N/A
     Memory ALUTs : 0
     Dedicated logic registers : 38
 Total registers : 38
-Total pins : 60
+Total pins : 58
 Total virtual pins : 0
 Total block memory bits : 0
 DSP block 18-bit elements : 0
