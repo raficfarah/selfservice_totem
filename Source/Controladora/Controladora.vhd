@@ -7,7 +7,7 @@ entity Controladora is
 		E, Z			 : in std_logic;
 		Maior_B, Menor_P : in std_logic;
 
-		Ld_Prod	    		    : out std_logic;
+		Ld_Prod, RST_Prod	    		    : out std_logic;
 		Ld_Bank, RST_Bank       : out std_logic;
 		Ld_Troco, RST_Troco     : out std_logic;
 		C, F 					: out std_logic
@@ -33,6 +33,7 @@ begin
 		case estado_atual is
 			when S0 =>
 				Ld_Prod <= '0';
+				RST_Prod <= '0';
 				Ld_Bank <= '0';
 				RST_Bank <= '0';
 				Ld_Troco <= '0';
@@ -48,6 +49,7 @@ begin
 				
 			when S1 =>
 				Ld_Prod <= '0';
+				RST_Prod <= '0';
 				Ld_Bank <= '0';
 				RST_Bank <= '0';
 				Ld_Troco <= '0';
@@ -63,6 +65,7 @@ begin
 				
 			when S2 =>
 				Ld_Prod <= '1';
+				RST_Prod <= '0';
 				Ld_Bank <= '1';
 				RST_Bank <= '0';
 				Ld_Troco <= '0';
@@ -74,6 +77,7 @@ begin
 
 			when S3 =>
 				Ld_Prod <= '0';
+				RST_Prod <= '0';
 				Ld_Bank <= '1';
 				RST_Bank <= '0';
 				Ld_Troco <= '0';
@@ -91,6 +95,7 @@ begin
 				
 			when S4 =>
 				Ld_Prod <= '0';
+				RST_Prod <= '1';
 				Ld_Bank <= '0';
 				RST_Bank <= '1';
 				Ld_Troco <= '0';
@@ -102,6 +107,7 @@ begin
 
 			when S5 =>
 				Ld_Prod <= '0';
+				RST_Prod <= '0';
 				Ld_Bank <= '0';
 				RST_Bank <= '0';
 				Ld_Troco <= '0';
@@ -117,6 +123,7 @@ begin
 			
 			when S6 =>
 				Ld_Prod <= '0';
+				RST_Prod <= '0';
 				Ld_Bank <= '0';
 				RST_Bank <= '0';
 				Ld_Troco <= '1';
@@ -128,6 +135,7 @@ begin
 
 			when S7 =>
 				Ld_Prod <= '0';
+				RST_Prod <= '1';
 				Ld_Bank <= '0';
 				RST_Bank <= '1';
 				Ld_Troco <= '0';

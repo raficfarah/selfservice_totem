@@ -10,7 +10,7 @@ entity MUX_Din is
 	
 	Port ( 
 		S : in std_logic_vector (2 downto 0);
-		I0  : in std_logic_vector((W-1) downto 0) := "0000000011001"; -- 25
+		I0  : in std_logic_vector((W-1) downto 0) := "0000000000000"; -- 0
 		I1  : in std_logic_vector((W-1) downto 0) := "0000000110010"; -- 50
 		I2  : in std_logic_vector((W-1) downto 0) := "0000001100100"; -- 100
 		I3  : in std_logic_vector((W-1) downto 0) := "0000011001000"; -- 200

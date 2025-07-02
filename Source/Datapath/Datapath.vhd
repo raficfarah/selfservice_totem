@@ -8,7 +8,7 @@ entity Datapath is
         din : in std_logic_vector(2 downto 0);
         CLK : in std_logic;
 
-        pinLd_Prod : in std_logic;
+        pinLd_Prod, pinRST_Prod : in std_logic;
         pinLd_Bank, pinRST_Bank : in std_logic;
         pinLd_Troco, pinRST_Troco : in std_logic;
 
@@ -156,7 +156,7 @@ begin
 
     port map(
         CLK => CLK,
-        RST => '0',
+        RST => pinRST_Prod,
         D => prod_in,
         Q => sigProd,
         LOAD => pinLd_Prod
