@@ -21,7 +21,7 @@ end Totem;
 
 architecture RTL of Totem is
 	
-	signal pinLd_Prod 					: std_logic;
+	signal pinLd_Prod, pinRST_Prod 					: std_logic;
 	signal pinLd_Bank, pinRST_Bank 	: std_logic;
     signal pinLd_Troco, pinRST_Troco 	: std_logic;
 
@@ -33,7 +33,7 @@ architecture RTL of Totem is
 			din 						: in std_logic_vector(2 downto 0);
 			CLK 						: in std_logic;
 
-			pinLd_Prod 					: in std_logic;
+			pinLd_Prod, pinRST_Prod 					: in std_logic;
 			pinLd_Bank, pinRST_Bank 	: in std_logic;
 			pinLd_Troco, pinRST_Troco 	: in std_logic;
 
@@ -58,7 +58,7 @@ architecture RTL of Totem is
 			E, Z			 		: in std_logic;
 			Maior_B, Menor_P 		: in std_logic;
 
-			Ld_Prod	    		    : out std_logic;
+			Ld_Prod, RST_Prod	    		    : out std_logic;
 			Ld_Bank, RST_Bank       : out std_logic;
 			Ld_Troco, RST_Troco     : out std_logic;
 			C, F 					: out std_logic
@@ -74,6 +74,7 @@ begin
 		CLK => CLK,
 
 		pinLd_Prod => pinLd_Prod,
+		pinRST_Prod => pinRST_Prod,
 		pinLd_Bank => pinLd_Bank,
 		pinRST_Bank => pinRST_Bank,
 		pinLd_Troco => pinLd_Troco,
@@ -101,6 +102,7 @@ begin
 		Maior_B => pinMaior_B,
 		Menor_P => pinMenor_p,
 		Ld_Prod => pinLd_Prod,
+		RST_Prod => pinRST_Prod,
 		Ld_Bank => pinLd_Bank,
 		RST_Bank => pinRST_Bank,
 		Ld_Troco => pinLd_Troco,
