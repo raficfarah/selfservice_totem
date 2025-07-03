@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Totem
-Wed Jul  2 12:56:55 2025
+Thu Jul  3 10:54:01 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -27,10 +27,9 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  19. Port Connectivity Checks: "Datapath:myDatapath|MUX_Din:myMUX_Din"
  20. Port Connectivity Checks: "Datapath:myDatapath|comparador:ComparadorLT"
  21. Port Connectivity Checks: "Datapath:myDatapath|comparador:ComparadorGT"
- 22. Port Connectivity Checks: "Datapath:myDatapath|RegW:Prod"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -57,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +-----------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Wed Jul  2 12:56:55 2025          ;
+; Analysis & Synthesis Status       ; Successful - Thu Jul  3 10:54:01 2025          ;
 ; Quartus Prime Version             ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                     ; Totem                                          ;
 ; Top-level Entity Name             ; Totem                                          ;
@@ -246,8 +245,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                               ;           ;
 ; Maximum fan-out node                          ; CLK~input ;
 ; Maximum fan-out                               ; 38        ;
-; Total fan-out                                 ; 819       ;
-; Average fan-out                               ; 2.83      ;
+; Total fan-out                                 ; 823       ;
+; Average fan-out                               ; 2.85      ;
 +-----------------------------------------------+-----------+
 
 
@@ -302,7 +301,7 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 38    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Clear ; 38    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 30    ;
 ; Number of registers using Preset             ; 0     ;
@@ -473,15 +472,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:myDatapath|RegW:Prod" ;
-+------+-------+----------+---------------------------------+
-; Port ; Type  ; Severity ; Details                         ;
-+------+-------+----------+---------------------------------+
-; rst  ; Input ; Info     ; Stuck at GND                    ;
-+------+-------+----------+---------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -489,8 +479,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriaii_ff            ; 38                          ;
 ;     CLR               ; 8                           ;
-;     ENA               ; 4                           ;
-;     ENA CLR           ; 26                          ;
+;     ENA CLR           ; 30                          ;
 ; boundary_port         ; 58                          ;
 ; stratixiv_lcell_comb  ; 139                         ;
 ;     arith             ; 13                          ;
@@ -517,7 +506,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -527,7 +516,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Jul  2 12:56:41 2025
+    Info: Processing started: Thu Jul  3 10:53:51 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Totem -c Totem
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -575,8 +564,7 @@ Info (12128): Elaborating entity "MUX_Din" for hierarchy "Datapath:myDatapath|MU
 Info (12128): Elaborating entity "BCD_Conv" for hierarchy "Datapath:myDatapath|BCD_Conv:myBCD_Conv" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 245
 Info (12128): Elaborating entity "BCD_7seg" for hierarchy "Datapath:myDatapath|BCD_7seg:myBCD_M" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 254
 Info (12128): Elaborating entity "prices" for hierarchy "Datapath:myDatapath|prices:myPrices" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Datapath/Datapath.vhd Line: 281
-Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:myControladora" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at Controladora.vhd(33): signal "estado_atual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Controladora/Controladora.vhd Line: 33
+Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:myControladora" File: /home/rafic/ufmg/labsd/2025-2/selfservice_totem/Source/Totem/Totem.vhd Line: 95
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -584,10 +572,10 @@ Info (21057): Implemented 198 device resources after synthesis - the final resou
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 47 output pins
     Info (21061): Implemented 140 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 504 megabytes
-    Info: Processing ended: Wed Jul  2 12:56:55 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 507 megabytes
+    Info: Processing ended: Thu Jul  3 10:54:01 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

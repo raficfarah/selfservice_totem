@@ -48,7 +48,7 @@ begin
 				end if;
 				
 			when S1 =>
-				Ld_Prod <= '1';
+				Ld_Prod <= '0';
 				RST_Prod <= '0';
 				Ld_Bank <= '0';
 				RST_Bank <= '0';
@@ -64,7 +64,7 @@ begin
 				end if;
 				
 			when S2 =>
-				Ld_Prod <= '0';
+				Ld_Prod <= '1';
 				RST_Prod <= '0';
 				Ld_Bank <= '1';
 				RST_Bank <= '0';
@@ -133,7 +133,7 @@ begin
 				
 				proximo_estado <= S7;
 
-			when others =>
+			when S7 =>
 				Ld_Prod <= '0';
 				RST_Prod <= '1';
 				Ld_Bank <= '0';
@@ -145,6 +145,15 @@ begin
 				
 				proximo_estado <= S0;
 			
+			when others =>
+				Ld_Prod    <= '0';
+				Ld_Bank    <= '0';
+				RST_Bank   <= '0';
+				Ld_Troco   <= '0';
+				RST_Troco  <= '0';
+				C            <= '0';
+				F            <= '0';
+				proximo_estado <= S0;
 		end case;
 	end process;
 end RTL;
