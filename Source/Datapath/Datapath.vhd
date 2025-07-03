@@ -229,7 +229,7 @@ begin
     port map(
         a => sigBank,
         B => sigPrice,
-        maior => pinMenor_P
+        menor => pinMenor_P
     );
 
     myMUX_Din : MUX_Din
