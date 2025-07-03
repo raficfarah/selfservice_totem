@@ -5,15 +5,15 @@ use ieee.numeric_std.all;
 entity Totem is
 
 	port(
-		E, Z						: in std_logic;
-		CLK, RST					: in std_logic;
+		E, Z									: in std_logic;
+		CLK, RST								: in std_logic;
 		
-		prod_in						: in std_logic_vector(3 downto 0);
-		din							: in std_logic_vector(2 downto 0);
+		prod_in								: in std_logic_vector(3 downto 0);
+		din									: in std_logic_vector(2 downto 0);
 
-		C, F						: out std_logic;
-		prod_out					: out std_logic_vector(3 downto 0);
-		troco_out 					: out std_logic_vector(12 downto 0);
+		C, F									: out std_logic;
+		prod_out								: out std_logic_vector(3 downto 0);
+		troco_out 							: out std_logic_vector(12 downto 0);
 		M_out, C_out, D_out, U_out 	: out std_logic_vector(6 downto 0)
 	);
 

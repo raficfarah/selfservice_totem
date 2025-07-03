@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all
+use ieee.numeric_std.all;
 
 entity tb_Totem is
 end tb_Totem;
@@ -50,16 +50,16 @@ begin
         F => fioF,
         troco_out => fioTroco_out,
         M_out => fioM_out,
-        C_out => fioCM_out => fioM_out,_out,
+        C_out => fioC_out,
         D_out => fioD_out,
         U_out => fioU_out
     );
 
     fioCLK <= not(fioCLK) after (CLK_PERIOD/2);
-    fioZ <= '1' after 5 ns, '0' after 10 ns;
-    fioE <= '1' after 10 ns, '0' after 20 ns, '1' after 45 ns;
-    fioProd_in <= '1000' after 10 ns;
-    fioDin <= '000', '110' after 25 ns;
+    fioZ <= '1' after 5 ns;
+    fioE <= '1' after 20 ns;
+    fioProd_in <= "1000" after 10 ns;
+    fioDin <= "000", "110" after 25 ns;
 
 
 end Behaviour;

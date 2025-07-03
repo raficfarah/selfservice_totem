@@ -3,11 +3,11 @@ use ieee.std_logic_1164.all;
 
 entity Controladora is
    port (
-		CLK, RST  		 : in std_logic;
-		E, Z			 : in std_logic;
-		Maior_B, Menor_P : in std_logic;
+		CLK, RST  		 		: in std_logic;
+		E, Z			 		: in std_logic;
+		Maior_B, Menor_P 		: in std_logic;
 
-		Ld_Prod, RST_Prod	    		    : out std_logic;
+		Ld_Prod, RST_Prod	    : out std_logic;
 		Ld_Bank, RST_Bank       : out std_logic;
 		Ld_Troco, RST_Troco     : out std_logic;
 		C, F 					: out std_logic
@@ -28,7 +28,7 @@ begin
 		end if;
 	end process;
 	
-	process(E, Z, Maior_B, Menor_P) is
+	process(E, Z, Maior_B, Menor_P, estado_atual) is
 	begin
 		case estado_atual is
 			when S0 =>
